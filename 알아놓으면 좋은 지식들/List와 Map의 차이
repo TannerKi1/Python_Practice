@@ -2,3 +2,11 @@
 
 
 
+정확히는
+
+Collection  --- List
+
+
+Map         --- HashTable
+
+각각의 대응 차원이 같은지는 확인이 필요함
