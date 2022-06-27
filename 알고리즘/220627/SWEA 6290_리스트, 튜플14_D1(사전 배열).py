@@ -17,9 +17,12 @@ inputWord = ['막', '부모님', '비용', '비행기', '원래', '처리', '최
 
 a = []
 for word in dicBase:
+    # print(word)
     b = []
     for realWord in inputWord:
         if word[0] < realWord <= word[1]:
             b.append(realWord)
     a.append(b)
-print(a)
+print(a) # 이렇게 하면 어떻게 for문이 돌아가는지 체크할 수 있다.
+
+# for 문을 2번 돌리는 것에 익숙해지자.
