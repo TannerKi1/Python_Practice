@@ -2,6 +2,13 @@
 
 
 b = list(map(str, input().split(',')))
+c = []
+for i in b:
+    c.append(i.strip())
 
-print(b)
+
+for k in sorted(c)[:-1]:
+    print(k, end = ', ')
+
+print(sorted(c)[-1])
 
