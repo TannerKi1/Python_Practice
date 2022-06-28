@@ -10,3 +10,7 @@ for i in a:
             c.append(j)
 
 print(c)
+
+
+## 내포로 다르게 풀면 어떻게 풀어야 할까?
+
