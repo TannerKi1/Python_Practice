@@ -7,5 +7,7 @@ beer = {'하이트': 2000, '카스': 2100, '칭따오': 2500, '하이네켄': 40
 # 어떤 걸 해서
 
 beer_2 = {j: k*1.05 for j, k in beer.items()}
-print(beer_2)
+
+print(beer, "# 인상 전")
+print(beer_2, "# 인상 후")
 
