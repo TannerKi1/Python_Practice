@@ -12,9 +12,10 @@ a = k[0:k.find(':', 0)]
 b = k[k.find('w', 0) : k.rfind('/', 0)]
 c = k[k.rfind('/', 0)+1:]
 
-print(f'protocol: {a}')
+print(f"protocol: {k[0:k.find(':', 0)]}")
 print(f'host: {b}')
 print(f'others: {c}')
 
 
 
+# f 스트링에서 ' 랑 " 잘 구분해주자
