@@ -4,7 +4,9 @@ my_dict = {"TV": 2000000, "냉장고": 1500000, "책상": 350000, "노트북": 1
 
 sorted_dict_2 = sorted(my_dict.items(), key = lambda item: item[1], reverse = True)
 
+
 print(my_dict.items())
+
 
 sorted_dic_3 = sorted(my_dict.items(), key = lambda item: item[0], reverse = False)
 
@@ -14,7 +16,8 @@ print(sorted_dic_3)
 # my.dict.items()가 무엇인지 부터 정리를 해야한다.
 # dict_items 뒤에 튜플 값을 반환해준다.
 # 여기에서 key item[0]은 품목이고, key item[1]은 가격이다.
-print("---*5")
+
+
 b = list(sorted_dict_2)
 for m, k in b:
     print(f'{m}: {k}')
