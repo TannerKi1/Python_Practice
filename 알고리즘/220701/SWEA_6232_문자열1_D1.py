@@ -7,4 +7,5 @@ T_list = list(T)
 T_list_Reverse = list(T)[::-1]
 
 if T_list == T_list_Reverse:
+    print(T)
     print("입력하신 단어는 회문(Palindrome)입니다.")
