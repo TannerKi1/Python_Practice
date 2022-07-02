@@ -1,4 +1,13 @@
 
+X = 40
+Y = 50
+Z = 500
+a = (X, Y, Z)
+print(a)
+print(type(a))
+
+# 튜플 테스트
+
 # 국어 수학 점수값을 튜플로 저장하고, 각각 튜플을 항목으로 갖는 리스트 객체가 있습니다.
 
 # [(   ,  ),   ( ,   ), ...] 이런 상황이 가정되어있는 것
@@ -18,20 +27,6 @@ count = int(input("총 학생 수를 입력하세요: "))
 #
 # print(scores)
 
-# 내부 스코어를 튜플로 받는 법은?
-
-# for i in range(1, count+1):
-#     score = ()
-#     kor = int(input(f'학생{i}의 국어 점수를 입력하세요: '))
-#     score.append(kor)
-#     math = int(input(f'학생{i}의 수학 점수를 입력하세요: '))
-#     score.append(math)
-#     scores.append(score)
-#
-# print(scores)
-
-# 이렇게 하면 오류가 난다. 왜냐. 튜플에는 append라는 함수가 없기 때문. append는 리스트만 쓸 수 있다.
-# 그럼 튜플로 받고 싶으면 어떻게 해야할까?
 
 for i in range(1, count+1):
     kor = int(input(f'학생{i}의 국어 점수를 입력하세요: '))
