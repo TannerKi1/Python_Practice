@@ -36,3 +36,6 @@ child = Child("길동", "홍")
 print(child.family_name)
 print(child.first_name)
 print(child.name)
+
+child.first_name = "길순이로 바꿔볼까"
+print(child.name)
