@@ -18,3 +18,4 @@ for x in T_str:
 
 print(sum(array))
 
+# list 내부의 값을 다 더하는 함수는 sum()
