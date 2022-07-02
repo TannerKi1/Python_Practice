@@ -4,28 +4,33 @@
 # 자식클래스에는 major 프로퍼티를 가진 GraduateStudent가 있고
 
 
-class Parent:
+class Student:
     def __init__(self, name):
         self.__name = name
 
+    @property
+    def name(self):
+        return self.__name
+
     def __repr__(self):
-        return f'이름: {self.__name}'
+        return f'이름: {self.name}'
 
 
-class Child(Parent):
+class GraduateStudent(Student):
     def __init__(self, name, major):
-        self.__name = name
+        Student.__init__(self, name)
         self.__major = major
 
+    @property
+    def major(self):
+        return self.__major
+
     def __repr__(self):
-        return f'이름: {self.__name}, 전공: {self.__major}'
+        return f'{Student.__repr__(self)}, 전공: {self.major}'
 
-students = [
-    Parent("홍길동"),
-    Child("이순신", "컴퓨터")
-]
 
-for student in students:
-    print(student)
+student1 = Student("홍길동")
+student2 = GraduateStudent("이순신", "컴퓨터")
+print(student1)
+print(student2)
 
-# 과연 이게 문제에서 원하던 값일까...라는 거지
