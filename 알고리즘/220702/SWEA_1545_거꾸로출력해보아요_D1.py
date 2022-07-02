@@ -6,11 +6,10 @@ b = []
 for x in range(0, N+1):
     b.append(x)
 
-k = sorted(b, key=lambda x : x, reverse = True)
+b.reverse()
 
-for j in k:
+for j in b:
     print(j, end=' ')
-
 
 
 
