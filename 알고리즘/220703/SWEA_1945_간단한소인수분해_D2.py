@@ -31,6 +31,9 @@ for i in range(1, T+1):
                         if N % 2 == 0:
                             count_2 += 1
                             N = N // 2
+                        elif N % 2 != 0:
+                            print("범위초과")
+                            break
 
     while N == 1:
         break
