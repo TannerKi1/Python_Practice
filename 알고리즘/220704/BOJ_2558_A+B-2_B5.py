@@ -1,8 +1,4 @@
-import sys
-N = 2
-lines = sys.stdin.readline()
-b = []
+A = int(input())
+B = int(input())
 
-for lines in range(1, N+1):
-    b.append(int(lines))
-print(sum(b))
+print(A+B)
