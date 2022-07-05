@@ -1,11 +1,9 @@
-N = int(input())
+n = int(input())
 
-def fibon(N):
-    if 1 <= N <= 2:
-        return 1
-    elif N == 0:
-        return 0
-    else:
-        return fibon(N-1) + fibon(N-2)
+a = 0
+b = 1
 
-print(fibon(N))
+for _ in range(1, n):
+    a, b = b, a+b
+
+print(b)
