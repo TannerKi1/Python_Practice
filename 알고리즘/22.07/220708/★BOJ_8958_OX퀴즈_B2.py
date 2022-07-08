@@ -12,6 +12,7 @@ for x in range(T):
 
     print(sum(real_answer))
 
+# 맥에서 타이핑한 게 윈도우에서도 잘 보이는지 테스트
 
 
 
