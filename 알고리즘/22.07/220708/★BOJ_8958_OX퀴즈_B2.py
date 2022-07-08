@@ -1,12 +1,17 @@
+T = int(input())
+for x in range(T):
+    arr = list(map(str, input().split('X')))
+    arr_2 = []
+    for j in arr:
+        arr_2.append(j.count('O'))
 
-arr = list(map(str, input().split('X')))
+    real_answer = []
 
-for j in arr:
-    print(j.count('O'))
+    for n in arr_2:
+        real_answer.append(int(n * (n+1) / 2))
+
+    print(sum(real_answer))
 
 
-num = 0
-for j in [1,2,3]:
-    num = num + j
 
-print(num)
+
