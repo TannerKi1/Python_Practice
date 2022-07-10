@@ -5,22 +5,20 @@ T = int(input())
 for _ in range(T):
     k = int(input())
     n = int(input())
-    array = [[0] * n for _ in range(k)]
+    array = [[0] * n for _ in range(k+1)]
     array[0][0] = 1
 
-    for K in range(0, k): # k는 층수]
-        for N in range(1, n):
+    for K in range(0, k+1): # k는 층수]
+        for N in range(0, n):
             if K == 0:
-                array[K][N-1] = N
-                continue
+                array[K][N] = N+1
             elif K != 0:
-                array[K][N-1] = N
-                if N == 1:
-                    array[K][N-1] = 1
+                if N == 0:
+                    array[K][N] = 1
                 elif N != 0:
                     array[K][N] = array[K][N-1] + array[K-1][N]
 
-    print(array)
+    print(array[k][n-1])
 
 
 
