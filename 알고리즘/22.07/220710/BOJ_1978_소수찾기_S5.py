@@ -15,10 +15,13 @@ for x in numbers:
             c_s = 1
     if c_s == 0:
         count += 1
+        
 
 
 print(count)
 
+
+# True False가 아니라, 0 or 1 로 내가 처리해주면 해결.
 
 
 
