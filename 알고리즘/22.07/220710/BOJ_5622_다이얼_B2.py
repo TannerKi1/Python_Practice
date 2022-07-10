@@ -30,8 +30,8 @@ book = {'A': 3,
        'Z': 10,
        }
 
-sum = 0
+sum_dial = 0
 for x in b:
-    sum += book[x]
+    sum_dial += book[x]
 
-print(sum)
+print(sum_dial)
