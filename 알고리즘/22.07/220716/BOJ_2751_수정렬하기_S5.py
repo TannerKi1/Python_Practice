@@ -3,11 +3,13 @@
 # 하지만 병합정렬에서는 숫자가 음수이면 사용할 수가 없다.
 # 음수를 정렬할 때는 어떻게 해야할까?
 
-unsorted_list = []
+# sorted() 이건 무슨 원리를 사용한 정렬인지...?
 
+unsorted_list = []
+import sys
 N = int(input())
 for x in range(N):
-    unsorted_list.append(int(input()))
+    unsorted_list.append(int(sys.stdin.readline().strip()))
 
 
 def merge_sort(unsorted_list):
