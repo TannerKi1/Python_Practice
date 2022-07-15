@@ -54,3 +54,4 @@ for x in answer_list:
     print(x)
 
 
+### 아니면 그냥 sorted(unsorted_list, reverse = True)로 처리하는 방법도 있다. 사실 이게 더 간단하지
