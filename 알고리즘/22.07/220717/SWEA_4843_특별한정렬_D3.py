@@ -25,5 +25,7 @@ for x in range(1, T+1):
         i += 1
         j -= 1
 
-    for x in range(10):
-        print(answer_list[x], end= ' ')
+
+    result = ' '.join(map(str, answer_list[0:10]))
+
+    print(f'#{x} {result}')
