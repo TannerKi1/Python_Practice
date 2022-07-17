@@ -1,14 +1,27 @@
+# 그냥 리스트로 풀자
+
+
 T = int(input())
 for i in range(T):
-    dict_num = dict()
     N = int(input())
+    count = [0] * 10
     number = str(input())
-    for char in number:
-        if char not in dict_num:
-            dict_num[char] = 1
-        else:
-            dict_num[char] += 1
 
-    for key, value in dict_num.items():
+    for x in number:
+        count[int(x)] += 1
+
+    max_Count = 0
+    idx = []
+    for k in range(len(count)):   # N은 4까지 비교됨
+        if count[k] >= max_Count:
+            max_Count = count[k]
+            idx.append(k)
+
+    print(f'#{i+1} {idx[-1]} {max_Count}')
+
+
+
+
+
 
 
