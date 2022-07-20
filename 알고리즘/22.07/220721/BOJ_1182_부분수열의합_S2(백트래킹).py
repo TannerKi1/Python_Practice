@@ -23,3 +23,6 @@ for x in arr_3:
             count += 1
 
 print(count)
+
+
+### https://seongonion.tistory.com/98 ### 효율적인 풀이 참조
