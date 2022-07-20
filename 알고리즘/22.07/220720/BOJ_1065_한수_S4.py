@@ -5,11 +5,10 @@
 # a[0] - a[i] =! 이런 걸로 끝가지 같으면 받고
 # 중간에 != 뜨면 break 뜨면서 while 탈출시키기
 
-N = str(input())
-for x in range(N):
-num_list = list(map(int, N))  # 리스트랑 맵이용해서 자유자재로 바꾸기
+N = int(input())
 
 def checker(x):
+    num_list = list(map(int, str(x)))
     i = 0
     if len(num_list) <= 2:
         return 1
@@ -21,7 +20,11 @@ def checker(x):
                 i += 1
         return 1
 
+count = 0
 
+for x in range(1, N+1):
+    if checker(x) == 1:
+        count += 1
 
-
+print(count)
 
