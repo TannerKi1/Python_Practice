@@ -6,10 +6,10 @@
 # 중간에 != 뜨면 break 뜨면서 while 탈출시키기
 
 N = str(input())
-count = 0
+for x in range(N):
 num_list = list(map(int, N))  # 리스트랑 맵이용해서 자유자재로 바꾸기
 
-def checker(num_list):
+def checker(x):
     i = 0
     if len(num_list) <= 2:
         return 1
