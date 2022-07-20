@@ -10,7 +10,7 @@ sort_arr.sort()
 for x in target_arr:
     left = 0
     right = len(sort_arr) - 1
-    isExist = False
+    isExist = False # 스위치로 처리하는 방법.
 
     while left <= right:
         mid = (left + right) // 2
@@ -18,7 +18,8 @@ for x in target_arr:
         if x == sort_arr[mid]:
             isExist = True
             print(1)
-            break
+
+
 
         elif x < sort_arr[mid]:
             right = mid - 1
