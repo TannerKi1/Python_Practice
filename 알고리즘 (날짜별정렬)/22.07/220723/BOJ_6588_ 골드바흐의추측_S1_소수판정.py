@@ -3,7 +3,7 @@
 arr = [0] * 1000000
 import sys
 
-for i in range(2, 1001):
+for i in range(2, 1001): #math.sqrt 를 근사값으로 계산해서 넣으면 모듈 불러오는 시간 줄일 수 있다.
     if arr[i] == 0:
         for j in range(i+i, 1000000, i):
             arr[j] = 1
