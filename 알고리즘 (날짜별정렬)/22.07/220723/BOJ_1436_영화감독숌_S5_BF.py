@@ -8,7 +8,8 @@ while N != 0:
     if '666' in str(first):
         N -= 1
     if N == 0:
-        break
+        break  # 0일때 break 끝내고 나와야 +1이 되지 않은 값을 볼 수 있다. 그전에는 계속 first가 증가해야하고.
+
     first += 1
 
 print(first)
