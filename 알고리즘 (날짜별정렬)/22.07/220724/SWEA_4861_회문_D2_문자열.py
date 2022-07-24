@@ -1,32 +1,28 @@
 T = int(input())
 for tc in range(T):
     N, M = map(int, input().split())
+    result = []
+
     arr = []
-    for i in range(N):
-        arr_small = []
-        k = input()
-        for z in range(N):
-            arr_small.append(k[z])
-        arr.append(arr_small)
+    for _ in range(N):
+        arr.append(input())
 
-## 여기까지 쪼개서 리스트로 받는 거 성공.
+    # 가로검색
 
-    res_list = []
-    for x in range(N):
-        res = ''
-        for j in range(N):
-            res += arr[x][j]
+    for r in range(N): # 20
+        for c in range(N - M + 1): # 13 ... range(8) # 시작점을 이렇게 잡아 준다.
+            if arr[r][c: c+M] == arr[r][c: c+M][::-1]:
+                result.append(arr[r][c: c+M])
 
-        res_list.append(res)
+    # 세로검색
 
-    for x in range(N):
-        res = ''
-        for j in range(N):
-            res += arr[j][x]
+    for r in range(N - M + 1):
+        for c in range(N):
+            c_list = []
+            for i in range(M):
+                c_list.append(arr[r+i][c])
 
-        res_list.append(res)
-
-# 중간부터 세는 건 어떻게 해야할 지 좀 더 생각해보기
+    # 세로 검색 코드가 좀 가로에 비해 직관적이지 않은데, 세로 코드를 직관적으로 짜보는 건...?
 
 
 
