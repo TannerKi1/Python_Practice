@@ -26,10 +26,10 @@ for TC in range(T):
                 count += 1
                 break # 빠져나가서 다시 k부터 돌게 된다. while에 걸리니까
                 # 만약 if문에 안 걸리면 K값이 -1로 빠지면서 다시 for문을 돌게된다.
-
         else:
             count = 0
             break
+
     print(f'#{TC+1} {count}')
 
 # 최대 K칸을 갈 수 있으면, K-1, K-2를 갈 수도 있기 때문에 이건 for문을 돌려야한다. 대신에 가장 멀리 가는 거니까 K에서부터 역으로 -1로 접근하는 것

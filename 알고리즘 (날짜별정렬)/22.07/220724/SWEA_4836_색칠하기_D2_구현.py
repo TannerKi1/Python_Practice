@@ -23,4 +23,8 @@ for tc in range(T):
     print(f'#{tc+1} {count}')
 
 
+# 2차원 리스트 구현 성공.
 
+# m * n으로 돌리는 거랑.
+
+# 정보를 나눠서 range 어떻게 돌릴지
