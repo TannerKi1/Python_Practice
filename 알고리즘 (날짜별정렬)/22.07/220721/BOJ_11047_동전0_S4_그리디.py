@@ -1,4 +1,4 @@
-# 그리디 대표적인 문제
+# 1. 그리디 대표적인 문제
 
 N, K = map(int, input().split())
 money_2 = []

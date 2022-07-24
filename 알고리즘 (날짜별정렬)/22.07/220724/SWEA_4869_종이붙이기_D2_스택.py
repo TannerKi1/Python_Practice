@@ -21,4 +21,4 @@ for tc in range(TC):
     print(f'#{tc+1} {d[n]}')
 
 
-# 굿
+# DP같기도 하고... 이게 왜 스택으로 분류되었을까?
