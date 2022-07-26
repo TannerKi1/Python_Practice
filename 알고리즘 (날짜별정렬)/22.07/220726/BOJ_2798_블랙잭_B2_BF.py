@@ -24,8 +24,9 @@
 
 # 3중 포문을 돌려야하나?
 
-print(100**3)
 
+N, M = map(int, input().split())
+arr = list(map(int, input().split()))
 
 
 
