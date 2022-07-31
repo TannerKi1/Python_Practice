@@ -1,36 +1,31 @@
 import sys
+from collections import deque
 N = int(sys.stdin.readline())
 
-arr = list(map(int, sys.stdin.readline().split()))
-number_list = []
-'''
-for i in range(N):
-    for j in range(1, N-i):
-        if arr[i+j] > arr[i]:
-            number_list.append(arr[i+j])
-            break
+n_list = list(map(int, sys.stdin.readline().split()))
+n2_list = []
+stack = []
+ans = [-1] * N
 
-    else:
-        number_list.append(-1)
+idx = 0
+for i in range(len(n_list)):
+    n2_list.append((n_list[i], idx))
+    idx += 1
 
-for x in number_list:
-    print(x, end= ' ')
-'''
-# 시간 초과가 났음.
-# for문을 2번 돌리지 않아도 되게..!
+n2_list_r = n2_list[::-1]
 
-i = 0
-while i < N:
-    for j in range(1, N-i):
-        if arr[i+j] > arr[i]:
-            print(arr[i+j], end=' ')
-            i += 1
-            break
 
-    else:
-        i += 1
-        print(-1, end=' ')
+while len(n2_list_r) > 1:
+    tmp, idx = n2_list_r.pop()
+    stack.append((tmp, idx))
 
-# while이나 for이나...
+    while stack and n2_list_r[-1][0] > stack[-1][0]:
+        tmp, idx = stack.pop()
+        ans[idx] = n2_list_r[-1][0]
+
+print(ans)
+
+# 비어있지 않으면을 while [집합이름] 으로 구현할 수 있다!!!
+
 
 
