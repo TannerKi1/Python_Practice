@@ -23,6 +23,8 @@ while len(n2_list_r) > 1:
         tmp, idx = stack.pop()
         ans[idx] = n2_list_r[-1][0]
 
+    # 만약에 빈칸이거나, 왼쪽 값이 스택 값보다 작으면 무시되고 다시 한 칸이 올라간다.
+
 print(ans)
 
 # 비어있지 않으면을 while [집합이름] 으로 구현할 수 있다!!!
