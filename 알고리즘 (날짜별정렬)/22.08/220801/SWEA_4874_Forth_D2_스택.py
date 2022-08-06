@@ -13,40 +13,40 @@ for tc in range(1, TC+1):
                 print(f'#{tc} error')
                 break
             else:
-                two_sum = stack[-1] + stack[-2]
-                stack.pop()
-                stack.pop()
-                stack.append(two_sum)
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b + a)
 
         elif i == '*':
             if len(stack) <= 1:
                 print(f'#{tc} error')
                 break
             else:
-                two_times = stack[-1] * stack[-2]
-                stack.pop()
-                stack.pop()
-                stack.append(two_times)
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b * a)
 
         elif i == '-':
             if len(stack) <= 1:
                 print(f'#{tc} error')
                 break
             else:
-                two_minus = stack[-1] - stack[-2]
-                stack.pop()
-                stack.pop()
-                stack.append(two_minus)
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b - a)
 
         elif i == '/':
             if len(stack) <= 1:
                 print(f'#{tc} error')
                 break
             else:
-                two_dev = stack[-1] / stack[-2]
-                stack.pop()
-                stack.pop()
-                stack.append(two_dev)
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b // a)
 
         elif i == '.':
-            print(f'#{tc} {stack[-1]}')
+            if len(stack) > 1:
+                print('error')
+            else:
+                a = stack.pop()
+                print(f'#{tc} {a}')
