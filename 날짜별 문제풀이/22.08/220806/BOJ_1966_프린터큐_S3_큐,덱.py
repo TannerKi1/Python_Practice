@@ -1,19 +1,22 @@
-import sys
-from collections import deque
-t = int(sys.stdin.readline())
+T = int(input())
 
-for tc in range(t):
-    n, m = map(int, sys.stdin.readline().split())
+for tc in range(T):
+    n, m = map(int, input().split())
     arr = list(map(int, input().split()))
+    arr_2 = [(val, idx) for idx, val in enumerate(arr)]
+    cnt = 0 # cnt 위치 신경쓰기
 
-    arr_2 = deque(arr)
-    if arr_2[0] < max(arr_2):
-        arr_2.rotate(-1)
-    elif arr_2[0] >= max(arr_2):
-        arr_2.popleft()
+    while True:
+        if arr_2[0][0] == max(arr_2, key = lambda x : x[0])[0]:
+            cnt += 1 # 어쨌거나 최대값이니까 인쇄는 해야함.
+            if arr_2[0][1] == m:
+                print(cnt)
+                break
+            else:
+                b = arr_2.pop(0)
 
-
-# enumerate로 같은 숫자일 경우에는 첫 숫자로 구분을 해줘야할까?
-
+        else:
+            b = arr_2.pop(0)
+            arr_2.append(b)
 
 
