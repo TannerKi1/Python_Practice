@@ -4,18 +4,20 @@ for tc in range(TC):
     V, E = map(int, input().split())
     graph = []
 
-    for _ in range(V+1):
+    for _ in range(V + 1):
         graph.append([])
 
     for _ in range(E):
         m, n = map(int, input().split())
-        graph[m].append(n) # 이 문제에서는 단방향과 양방향을 구분함.
+        graph[m].append(n)  # 이 문제에서는 단방향과 양방향을 구분함.
 
     p, q = map(int, input().split())
 
-    visited = [False] * (V+1)
+    visited = [False] * (V + 1)
 
     answer = list()
+
+
     def dfs(graph, v, visited):
         visited[v] = True
         answer.append(v)
@@ -25,14 +27,9 @@ for tc in range(TC):
 
         if q in answer:
             return 1
-        else :
+        else:
             return 0
-    print(f'#{tc+1}', end = ' ')
+
+
+    print(f'#{tc + 1}', end=' ')
     print(dfs(graph, p, visited))
-
-
-
-
-
-
-
