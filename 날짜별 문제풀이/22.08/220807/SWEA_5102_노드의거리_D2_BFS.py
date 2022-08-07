@@ -32,11 +32,14 @@ for tc in range(1, T+1):
                 elif not visited[j]:
                     visited[j] = True
                     queue.append((j, cnt + 1)) # 이 경우, 3과 4는 (3, 1) (4, 1)로 저장되게 된다.
+                                            # 그 다음에, 도착하는 6은 원래는 (6, 2)
+                                            # 3에서 풀발해서 2로 도착한다면 (2, 2).. 뒤에 노드 개수 저장가능.
 
         return 0
 
     print(f'#{tc}', end = ' ')
     print(bfs(graph, s, visited))
+
 
 
 
