@@ -6,7 +6,7 @@ command = ['U', 'D', 'L', 'R'] # 굳이 2*2 그래프를 만들 필요도 없었
 
 x, y = 1, 1
 
-plans = input().split()  #map이 아니면 굳이 앞에 list로 닫아줄 필요 없음.
+plans = input().split()  #map이 아니면 굳이 앞에 list로 닫아줄 필요 없음 , 이건 문자열인 경우고 숫자로 받으려면 list map해줘야함
 
 for plan in plans:
     for i in range(4):
