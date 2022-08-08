@@ -27,6 +27,8 @@ def bfs(graph, X, visited):
 
 bfs(graph, X, visited)
 
+# 아래를 더 깔끔하게 할 수는 없을지...?
+
 arr = []
 for x in answer:
     if x[1] == K:
