@@ -11,6 +11,8 @@ def dfs(x, y):
     if x < 0 or x >= n or y < 0 or y >= m:
         return False
 
+    # 재귀부르는 법 익혀놓기
+
     if graph[x][y] == 0:
         graph[x][y] = 1
         dfs(x - 1, y)
