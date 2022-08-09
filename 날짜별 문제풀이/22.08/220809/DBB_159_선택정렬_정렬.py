@@ -5,7 +5,7 @@ for i in range(len(arr)):
     for j in range(i + 1, len(arr)): # 시작점 바로 오른쪽부터 시작해 오른쪽으로 쭉 가겠다.
         if arr[min_index] > arr[j]:
             min_index = j
-    arr[i], arr[min_index] = arr[min_index], arr[i]  # 이건 특이하게 결과값이 뒤에 껄로 바뀌게 됨
+    arr[i], arr[min_index] = arr[min_index], arr[i]  # 아래 for문 다 돌고 난 뒤에 위치 교체
     print(arr)
 print(arr)
 
