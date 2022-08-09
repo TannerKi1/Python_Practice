@@ -1,7 +1,7 @@
 n, k = map(int, input().split())
 arr = list(map(int, input().split()))
 
-start = 0
+start = 1 # 1로 둬도 되고, 0으로 두어도 된다..? 아 근데 랜선자르기는 나눗셈이 들어가서 그렇구나.
 end = max(arr)
 
 result = 0
