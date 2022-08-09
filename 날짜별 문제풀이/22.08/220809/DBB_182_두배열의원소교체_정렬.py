@@ -8,12 +8,15 @@ max_arr.sort(reverse=True)
 
 
 life = k
-while life >= 1:
-    for i in range(n):
-        if min_arr[i] < max_arr[i]:
-            min_arr[i] = max_arr[i]
-            life -= 1
-    break
+
+for i in range(n):
+    if min_arr[i] < max_arr[i]:
+        min_arr[i] = max_arr[i]
+        life -= 1
+
+    if life == 0:
+        break
+
 
 
 print(min_arr)
