@@ -5,7 +5,7 @@ for _ in range(N):
     arr.append((name, score))
 
 
-arr = sorted(arr, key=lambda x: x[1])
+arr = sorted(arr, key=lambda x: x[1]) # 람다 표현법
 
 for student in arr:
     print(student[0], end=' ')
