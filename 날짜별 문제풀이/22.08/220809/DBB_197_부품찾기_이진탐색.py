@@ -6,7 +6,7 @@ def binary_search(array, target, start, end):
             return mid
 
         elif array[mid] > target:
-            end = mid - 1
+            end = mid - 1 # -1 로 두었기 때문에 end 값이 start보다 작아지면서 탈출을 할 수 있게 됨
 
         else:
             start = mid + 1
