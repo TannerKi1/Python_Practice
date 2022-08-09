@@ -4,6 +4,7 @@ arr = list(map(int, input().split()))
 start = 0
 end = max(arr)
 
+result = 0
 while start <= end:
 
     mid = (start + end) // 2
