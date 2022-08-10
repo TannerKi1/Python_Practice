@@ -1,6 +1,6 @@
 # 다시푸는 문제
-
 # sort함수에 키 제대로 넣을 수 있나 보는 거임.
+# DBB 참고
 
 N = int(input())
 student = []
