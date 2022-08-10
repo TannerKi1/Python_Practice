@@ -5,7 +5,10 @@ graph = [[INF] * (n+1) for _ in range(n+1)]
 
 for _ in range(m):
     a, b, c = map(int, input().split())
-    graph[a][b] = c #노선은 하나가 아닐 수 있다. 어떻게 업데이트 할까?
+    if graph[a][b] > c:
+        graph[a][b] = c #노선은 하나가 아닐 수 있다. 어떻게 업데이트 할까? 작은 경우에만 갱신해주면 된다!
+    else:
+        continue
 
 for i in range(1, n+1):
     graph[i][i] = 0
