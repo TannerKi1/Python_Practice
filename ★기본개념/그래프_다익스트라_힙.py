@@ -1,14 +1,28 @@
-# 차라리 heapq를 쓰는 게 코드가 훨씬 더 간단하게 느껴진다?
+import sys
+input = sys.stdin.readline
+INF = int(1e9)
+
+n, m = map(int, input().split())
+start = int(input())
+
+# 1) 개선된 다익스트라
 
 
-# import sys
-# input = sys.stdin.readline
-# INF = int(1e9)
-#
-# n, m = map(int, input().split())
-# start = int(input())
+
+
+
+
+
+
+
+
+
+
+
+
+#2 기본 다익스트라
+
 # graph = [[] for _ in range( n + 1)] # 노드 그래프 만들기, +1의 이유는 앞에 0노드 만들어서 직관 대응해주려고
-#
 # visited = [False] * (n + 1) # 방문 그래프
 # distance = [INF] * (n + 1)
 #
@@ -17,7 +31,7 @@
 #     graph[a].append((b, c))
 #
 #
-# # 여기까지 사전 정보 입력 완료.
+# 여기까지 사전 정보 입력 완료.
 #
 # def get_smallest_node():
 #     min_value = INF
@@ -53,9 +67,9 @@
 #         print("INFINITY")
 #     else:
 #         print(distance[i])
-#
-#
-#
-#
-#
-#
+
+
+
+
+
+
