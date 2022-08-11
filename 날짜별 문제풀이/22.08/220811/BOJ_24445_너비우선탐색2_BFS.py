@@ -14,7 +14,7 @@ for i in range(len(graph)):
     graph[i].sort(reverse = True)
 
 
-order = []
+order = [0] * (N+1)
 
 def bfs(start):
     q = deque([start])
@@ -25,13 +25,14 @@ def bfs(start):
     while q:
         k = q.popleft()
         cnt += 1
-        order.append((k, cnt))
+        order[k] = cnt
         for x in graph[k]:
             if not visited[x]:
                 q.append(x)
                 visited[x] = True
 
+bfs(start)
 
-
-
+for i in range(1, N+1):
+    print(order[i])
 
