@@ -15,7 +15,6 @@ def dfs(start):
 
     for x in graph[start]:
         if not visited[x]:
-            visited[x] = True
             dfs(x)
 
 
