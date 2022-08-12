@@ -2,38 +2,32 @@ from collections import deque
 
 V, E = map(int, input().split())
 
-received = [0] * (V+1)
+visited_checker = [0] * (V+1)
 
-graph = [[] for _ in range(V+1)]
+graph = [ [] for _ in range(V+1)]
 
 for _ in range(E):
     a, b = map(int, input().split())
-    received[b] += 1
+    visited_checker[b] += 1
     graph[a].append(b)
 
+visit = []
 
-def topology_sort():
-    order = []
-    q = deque([])
+q = deque()
 
-    for x in range(1, V+1):
-        if received[x] == 0:
-            q.append(x)
+for i in range(1, V+1):
+    if visited_checker[i] == 0:
+        q.append(i)
 
-    ## 요까지는 구현 완료
+# while indent 위치 조심.
 
-    while q:
-        now = q.popleft()
-        order.append(now)
+while q:
+    now = q.popleft()
+    visit.append(now)
 
-        for i in graph[now]:
-            received[i] -= 1
+    for j in graph[now]:
+        visited_checker[j] -= 1
+        if visited_checker[j] == 0:
+            q.append(j)
 
-            if received[i] == 0:
-                q.append(i)
-
-    for i in order:
-        print(i, end = ' ')
-
-topology_sort()
-
+print(visit)

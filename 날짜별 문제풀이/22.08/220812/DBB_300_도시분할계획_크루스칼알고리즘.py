@@ -1,29 +1,25 @@
-N, M = map(int, input().split())
+V, E = map(int, input().split())
 
-parent = [0] * (N+1)
+parent = [0] * (V+1)
 
-for i in range(1, N+1):
-    parent[i] = i # 집합노드
+for i in range(1, V+1):
+    parent[i] = i
 
+road = []
 
-edges = [] # 모든 도로들의 정보가 들어가있음.
-for _ in range(M):
-    a, b, cost = map(int, input().split())
-    edges.append((cost, a, b))
+for _ in range(E):
+    data = map(int, input().split())
+    a, b, cost = data
+    road.append((cost, a, b))
 
-edges.sort()
-
-### 사전 준비 완료
-
-### 함수 준비 시작
-
+road.sort()
 
 def find_parent(parent, x):
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
 
-def union(parent, a, b):
+def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
 
@@ -32,16 +28,13 @@ def union(parent, a, b):
     else:
         parent[a] = b
 
-total = 0
+real_road = list()
 
-
-for edge in edges:
-    cost, a, b = edge
+for item in road:
+    cost, a, b = item
     if find_parent(parent, a) != find_parent(parent, b):
-        union(parent, a, b)
-        total += cost
-        ### 마지막 cost
-        last = cost
+        real_road.append(cost)
+        union_parent(parent, a, b)
 
-
+print(sum(real_road) - real_road[-1])
 
