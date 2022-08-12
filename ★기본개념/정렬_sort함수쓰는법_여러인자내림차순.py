@@ -7,6 +7,7 @@ student = []
 for _ in range(N):
     student.append(input().split())
 
+# 값 준비완료
 
 student.sort(key = lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
 
