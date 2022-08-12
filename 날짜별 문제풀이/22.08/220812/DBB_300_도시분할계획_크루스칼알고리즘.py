@@ -33,14 +33,15 @@ def union(parent, a, b):
         parent[a] = b
 
 total = 0
-result = []
+
 
 for edge in edges:
     cost, a, b = edge
     if find_parent(parent, a) != find_parent(parent, b):
-        total += cost
-        result.append(cost)
         union(parent, a, b)
+        total += cost
+        ### 마지막 cost
+        last = cost
 
-print(total - result[-1])
+
 
