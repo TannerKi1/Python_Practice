@@ -9,7 +9,7 @@ for i in range(1, N+1):
 
 for _ in range(M):
     a, b, cost = map(int, input().split())
-    if cost < graph[a][b]:
+    if cost < graph[a][b]: # 이 문제의 핵심. 새로 들어온 노선의 값이 기존의 값보다 저렴할 때만 그래프 가격을 업데이트 시켜준다.
         graph[a][b] = cost
 
 for k in range(1, N+1):
