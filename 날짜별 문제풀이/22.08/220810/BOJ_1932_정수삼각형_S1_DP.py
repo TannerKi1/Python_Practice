@@ -38,3 +38,4 @@ if n >= 3:
     print(max_num)
 
 
+print(d)
