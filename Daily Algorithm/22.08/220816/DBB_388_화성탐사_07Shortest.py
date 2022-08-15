@@ -4,13 +4,12 @@ import heapq
 import sys
 input = sys.stdin.readline
 INF = int(1e9)
+T = 1
+while True:
 
-T = int(input())
-
-
-
-for _ in range(T):
     N = int(input())
+    if N == 0:
+        exit()
     graph = []
     for _ in range(N):
         graph.append(list(map(int, input().split())))
@@ -41,7 +40,8 @@ for _ in range(T):
                 distance[nx][ny] = cost
                 heapq.heappush(q, (cost, nx, ny))
 
-    print(distance[N-1][N-1])
+    print(f'Problem {T}: {distance[N-1][N-1]}')
+    T += 1
 
 
 
