@@ -47,4 +47,3 @@ print(distance[a])  # 4에서 출발 6으로
 print(distance[b])  # 4에서 출발 2로
 
 print(point)
-
