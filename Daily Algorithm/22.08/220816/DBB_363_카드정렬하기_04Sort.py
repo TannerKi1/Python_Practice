@@ -15,6 +15,7 @@ while len(q) != 1:
     two = heapq.heappop(q)
     sum_value = one + two
     result += sum_value
+    print(result)
 
     heapq.heappush(q, sum_value)
 

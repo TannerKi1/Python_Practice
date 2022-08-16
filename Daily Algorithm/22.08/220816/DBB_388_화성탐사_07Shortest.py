@@ -39,6 +39,7 @@ while True:
             if cost < distance[nx][ny]:
                 distance[nx][ny] = cost
                 heapq.heappush(q, (cost, nx, ny))
+                print(distance)
 
     print(f'Problem {T}: {distance[N-1][N-1]}')
     T += 1
