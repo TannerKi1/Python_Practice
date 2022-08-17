@@ -11,7 +11,7 @@ for i in range(n):
 result = 0
 
 while len(q) != 1:
-    one = heapq.heappop(q) # 알아서 늘 작은 2개를 리턴해줌.
+    one = heapq.heappop(q) # 알아서 늘 가장 작은 1개를 리턴해줌.
     two = heapq.heappop(q)
     sum_value = one + two
     result += sum_value
