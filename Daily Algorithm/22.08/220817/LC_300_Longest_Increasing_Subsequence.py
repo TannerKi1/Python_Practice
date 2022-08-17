@@ -12,6 +12,7 @@ for x in nums:
 
     else:
         d[val] = x
+    print(d)
 
 
 print(len(d))
