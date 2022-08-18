@@ -53,10 +53,12 @@ Wall_list = list(combinations(wall, 3))
 
 max_val = 0
 
-for i in range(len(Wall_list)):
+for x in Wall_list:
     temp = deepcopy(Map)
-    for j in range(3):
-        temp[Wall_list[i][j][0]][Wall_list[i][j][1]] = 1
+    a, b, c = x
+    temp[a[0]][a[1]] = 1
+    temp[b[0]][b[1]] = 1
+    temp[c[0]][c[1]] = 1
 
     temp = bfs(temp)
     val = count(temp)
