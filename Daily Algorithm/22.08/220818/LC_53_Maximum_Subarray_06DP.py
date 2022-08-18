@@ -6,12 +6,12 @@ k = len(nums)
 
 arr = [0] + nums
 
-cache = [-9999] * (k + 1)
+max_num = [-9999] * (k + 1)
 
 
 for i in range(1, k+1):
-    cache[i] = max(arr[i], cache[i-1] + arr[i])
+    max_num[i] = max(arr[i], max_num[i-1] + arr[i])
 
-print(cache)
+print(max_num)
 
 # dp에서는 max를 진짜진짜 잘쓰자...
