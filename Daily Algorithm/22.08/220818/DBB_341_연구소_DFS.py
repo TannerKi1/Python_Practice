@@ -55,6 +55,11 @@ def dfs(count):
                 data[i][j] = 1
                 count += 1
                 dfs(count)
+                for a in range(n):
+                    for b in range(m):
+                        print(data[a][b], end=' ')
+                    print()
+                print("---")
                 data[i][j] = 0
                 count -= 1
 
