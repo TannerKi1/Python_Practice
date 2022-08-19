@@ -21,8 +21,6 @@ def solution(idx, n, lst):
             solution(idx + 1, n, lst)
             lst[idx] = False
             solution(idx + 1, n, lst)
-            lst[idx] = "나는 고양이"
-            solution(idx + 1, n, lst)
 
 answer = 0
 n = 3
