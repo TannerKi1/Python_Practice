@@ -16,13 +16,13 @@ for i in range(v):
     graph[a].append(b)
     graph[b].append(a)
 
-
+# dfs 만들기, 여기서는 return값 없이 visited 리스트 값만 변화시키게 됨
 def dfs(start, graph, visited):
     visited[start] = True
 
     for i in graph[start]:
-        if not visited[i]:
-            visited[i] = True
+        if not visited[i]: # 방문하지 않았다면 방문 여부를 true로 바꾸고 해당 값 안의 노드를 처음부터 탐색함
+            visited[i] = True # 만약 전부 방문했다면 그 한 단계 위의 노드로 가서 다음 노드를 탐색
             dfs(i, graph, visited)
 
 
