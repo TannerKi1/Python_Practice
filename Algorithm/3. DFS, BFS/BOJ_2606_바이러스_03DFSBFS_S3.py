@@ -27,8 +27,10 @@ def dfs(v):
             dfs(new)
 
 
+# dfs 실행하기
 dfs(1)
 
+# 전체 방문 횟수 카운팅하기
 cnt = 0
 for i in range(2, v+1):
     if visited[i] == 1:
