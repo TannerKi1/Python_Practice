@@ -1,43 +1,58 @@
+
+# 가로세로 정보 다운로드
 n = int(input())
-graph = []
+rows = n
+cols = n
+
+# 그리드 생성
+grid = []
+
+# 세로 길이 rows만큼 그리드 정보 다운로드
+for _ in range(rows):
+    grid.append(list(map(int, input())))
+
+# house 변수 선언
 house = 0
-import sys
-sys.setrecursionlimit(10000)
 
-# 단지 맵 그리기 완료
-for _ in range(n):
-    graph.append(list(map(int, input())))
 
-def dfs(x, y):
+# dfs 구현
+def dfs(r, c):
+
+    # 함수 외부의 전역변수이기 때문에 global로 선언
     global house
 
-    if x < 0 or x >= n or y < 0 or y >= n:
+    if r < 0 or r >= rows or c < 0 or c >= cols:
         return False
 
-    if graph[x][y] == 1:
-        graph[x][y] = 2
+    if grid[r][c] == 1:
+        grid[r][c] = 0
         house += 1
-        dfs(x - 1, y)
-        dfs(x + 1, y)
-        dfs(x, y - 1)
-        dfs(x, y + 1)
+        dfs(r - 1, c)
+        dfs(r + 1, c)
+        dfs(r, c - 1)
+        dfs(r, c + 1)
         return True
     return False
 
-houses = []
+
+# 전체 집이 감염되는 횟수 선언
 cnt = 0
-for i in range(n):
-    for j in range(n):
-        if dfs(i, j):
+houses = []
+for r in range(rows):
+    for c in range(cols):
+        if dfs(r, c):
             houses.append(house)
-            house = 0
             cnt += 1
+            # true가 한번 돌 때 인접한 집은 모두 감염되었기 때문에 다음 집을 위해서 다시 0으로 선언해줘야함.
+            house = 0
 
-print(cnt)
+# 오름차순으로 정렬
 houses.sort()
-for x in houses:
-    print(x)
 
+# 전체 횟수와 각각 낮은 숫자부터 인쇄
+print(cnt)
+for i in range(cnt):
+    print(houses[i])
 
 
 

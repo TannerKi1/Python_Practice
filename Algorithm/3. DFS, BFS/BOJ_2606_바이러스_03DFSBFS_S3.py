@@ -37,4 +37,3 @@ for i in range(2, v+1):
         cnt += 1
 
 print(cnt)
-print(visited)
