@@ -1,38 +1,38 @@
-import sys
-input = sys.stdin.readline
-
-n = int(input())
+# 컴퓨터 개수와 간선 개수 입력
 v = int(input())
+e = int(input())
 
-# 간선 정보를 담을 그래프 틀 만들기
-graph = [[] for _ in range(n + 1)]
+# 컴퓨터 연결 상태를 저장할 그래프 생성
+graph = [[] for _ in range(v + 1)]
 
-# 방문 여부를 체크하는 리스트 만들기
-visited = [False] * (n + 1)
-
-# 간선 정보 받아오기 # 양방향으로 받아와야함
-for i in range(v):
+# e만큼 돌면서 입력
+for _ in range(e):
     a, b = map(int, input().split())
+
+    # 양방향이기 때문에 양쪽으로 입력
     graph[a].append(b)
     graph[b].append(a)
 
-# dfs 만들기, 여기서는 return값 없이 visited 리스트 값만 변화시키게 됨
-def dfs(start, graph, visited):
-    visited[start] = True
-
-    for i in graph[start]:
-        if not visited[i]: # 방문하지 않았다면 방문 여부를 true로 바꾸고 해당 값 안의 노드를 처음부터 탐색함
-            visited[i] = True # 만약 전부 방문했다면 그 한 단계 위의 노드로 가서 다음 노드를 탐색
-            dfs(i, graph, visited)
+#방문이 기록가능한 방문 노드 만들기
+visited = [0] * (v + 1)
 
 
-dfs(1, graph, visited)
+# dfs 만들기
+def dfs(v):
 
-# 감염 여부를 세는 곳
+    visited[v] = 1
+
+    for new in graph[v]:
+        if visited[new] == 0:
+            dfs(new)
+
+
+dfs(1)
+
 cnt = 0
-for computer in visited:
-    if computer:
+for i in range(2, v+1):
+    if visited[i] == 1:
         cnt += 1
 
-# 자기 자신을 빼야 하므로
-print(cnt - 1)
+print(cnt)
+print(visited)
